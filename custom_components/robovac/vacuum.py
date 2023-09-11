@@ -27,7 +27,7 @@ import ast
 from typing import Any
 from enum import IntEnum
 from homeassistant.loader import bind_hass
-from homeassistant.components.vacuum import VacuumEntity, VacuumEntityFeature
+from homeassistant.components.vacuum import StateVacuumEntity, VacuumEntityFeature
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import (
@@ -115,7 +115,7 @@ async def async_setup_entry(
         async_add_entities([RoboVacEntity(item)])
 
 
-class RoboVacEntity(VacuumEntity):
+class RoboVacEntity(StateVacuumEntity):
     """Eufy Robovac version of a Vacuum entity"""
 
     _attr_should_poll = True
