@@ -294,8 +294,8 @@ class RoboVacEntity(StateVacuumEntity):
             connections=[
                 (CONNECTION_NETWORK_MAC, item[CONF_MAC]),
             ],
-            access_token=item[CONF_ACCESS_TOKEN],
-            ip_address=item[CONF_IP_ADDRESS],
+            #access_token=item[CONF_ACCESS_TOKEN],
+            #ip_address=item[CONF_IP_ADDRESS],
         )
         self.vacuum = robovac(
             device_id=self.unique_id,
